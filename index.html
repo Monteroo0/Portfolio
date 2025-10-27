@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Juan Montero</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="img/imglogo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3da5dd',
+            secondary: '#2ca4bf',
+            background: '#171a21',
+            darkAccent: '#1e293b',
+            text: '#ffffff'
+          },
+          boxShadow: {
+            'glow': '0 0 20px #3da5dd',
+          },
+          fontFamily: {
+            'poppins': ['Poppins', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-background text-text font-poppins">
+
+  <!-- NAV -->
+  <header class="bg-background/60 backdrop-blur-lg fixed w-full z-50 shadow-md transition-all duration-300" id="navbar">
+    <nav class="max-w-7xl mx-auto flex items-center px-6 py-4">
+      <div class="logo mr-10 relative logo-container">
+        <div class="logo-background absolute inset-0 rounded-full bg-transparent backdrop-blur-sm"></div>
+        <img src="img/logo.png" alt="Logo" class="small-logo relative z-10" />
+      </div>
+
+      <!-- Menú Escritorio -->
+      <ul class="hidden md:flex space-x-10 text-white text-left">
+        <li><a href="#inicio" class="nav-link relative">Home</a></li>
+        <li><a href="#sobremi" class="nav-link relative">About me</a></li>
+        <li><a href="#habilidades" class="nav-link relative">Skills</a></li>
+        <li><a href="#proyectos" class="nav-link relative">Projects</a></li>
+        <li><a href="#contacto" class="nav-link relative">Contact</a></li>
+      </ul>
+
+      <!-- Botón hamburguesa -->
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Menú Móvil -->
+    <div id="mobile-menu"
+      class="hidden md:hidden flex flex-col items-center bg-background/60 backdrop-blur-lg text-white px-6 pb-4 space-y-4">
+      <a href="#inicio"
+        class="mobile-nav-link w-full py-2 px-4 hover:bg-primary/20 rounded-lg transition-all">Home</a>
+      <a href="#sobremi" class="mobile-nav-link w-full py-2 px-4 hover:bg-primary/20 rounded-lg transition-all">About
+        me</a>
+      <a href="#habilidades"
+        class="mobile-nav-link w-full py-2 px-4 hover:bg-primary/20 rounded-lg transition-all">Skills</a>
+      <a href="#proyectos"
+        class="mobile-nav-link w-full py-2 px-4 hover:bg-primary/20 rounded-lg transition-all">Projects</a>
+      <a href="#contacto"
+        class="mobile-nav-link w-full py-2 px-4 hover:bg-primary/20 rounded-lg transition-all">Contact</a>
+    </div>
+  </header>
+
+
+  <!-- INICIO -->
+  <section id="inicio" class="section-with-bg min-h-screen flex items-center relative" data-bg="inicio-bg">
+    <div class="bg-overlay absolute inset-0 bg-black/0"></div>
+    <!-- Fondo de la sección -->
+    <div class="absolute inset-0 z-0">
+      <img src="img/fondo 1.png" alt="Fondo inicio" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/25 backdrop-blur-sm"></div>
+    </div>
+    <div class="max-w-6xl w-full mx-auto px-8 md:px-16 flex flex-row-reverse md:flex-row items-center justify-center gap-16 z-10 relative">
+      <!-- Imagen de perfil (ahora a la izquierda) -->
+      <div class="profile-image-container relative order-2 md:order-1" style="transform: scale(0.6);">
+        <div class="profile-image-wrapper" style="border: 4px solid #3da5dd; box-shadow: 0 0 40px rgba(0, 0, 0, 0.8); border-radius: 50%; overflow: hidden;">
+          <img src="img/perfil.png" alt="Profile photo" class="profile-image" />
+        </div>
+      </div>
+
+      <!-- Texto (ahora a la derecha) -->
+      <div class="space-y-8 max-w-xl md:mr-12 hero-content order-1 md:order-2 md:ml-12">
+        <img src="img/welcomeportafolio.png" alt="Welcome to my Portfolio" class="w-full max-w-md mx-auto" />
+        <p class="text-white text-lg text-center">
+          "Turning ideas into digital experiences that inspire and innovate."
+        </p>
+
+        <!-- Botones -->
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="#contacto"
+            class="btn-primary px-6 py-3 rounded-full bg-primary hover:bg-primary/80 text-white font-medium transition-all flex items-center gap-2">
+            <i class="fas fa-envelope"></i>
+            Contact me
+          </a>
+          <a href="#proyectos"
+            class="btn-secondary px-6 py-3 rounded-full bg-transparent hover:bg-white/10 text-white border border-white/30 font-medium transition-all flex items-center gap-2">
+            <i class="fas fa-code"></i>
+            View projects
+          </a>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="flex gap-4 pt-4 justify-center">
+          <a href="https://github.com/Monteroo0" class="social-icon" aria-label="GitHub">
+            <i class="fab fa-github text-2xl hover:text-primary transition-colors"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/juan-montero0/" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin text-2xl hover:text-primary transition-colors"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Discord" title="monteroo0">
+            <i class="fab fa-discord text-2xl hover:text-primary transition-colors"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="sobremi" class="section-with-bg py-20 relative" data-bg="sobremi-bg">
+    <div class="absolute inset-0 z-0">
+      <img src="img/fondo 2.png" alt="Fondo sobre mí" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/25 backdrop-blur-sm"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-8 md:px-16 relative z-10">
+      <div class="flex justify-end mb-16">
+        <img src="img/knowme.png" alt="Know Me" class="w-full max-w-md" />
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <!-- Image on the left -->
+        <div class="about-image-container mx-auto md:mx-0 order-2 md:order-1">
+          <img src="img/sobremi.jpg" alt="About me" class="about-image rounded-lg shadow-xl" />
+        </div>
+
+        <!-- Text aligned to the left -->
+        <div class="space-y-6 order-1 md:order-2 text-left">
+            <h3 class="text-2xl font-semibold text-primary">Hello! I'm <span class="text-white">Juan Esteban Montero Arias</span></h3>
+            <p class="text-gray-300">
+              I am 17 years old and originally from Bogotá, though I currently reside in Floridablanca. My knowledge of programming is minimal, 
+              but I am eager to learn everything related to it, as I find this field highly interesting.
+            </p>
+            <p class="text-gray-300">
+              I have a strong passion for video games and enjoy playing the guitar. Additionally, I take great satisfaction in helping 
+              others and striving to achieve ambitious goals.
+            </p>
+
+          <!-- Personal data -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            <div class="flex items-center gap-3">
+              <i class="fas fa-user text-primary"></i>
+              <span class="text-gray-300">Name: <span class="text-white">Juan Esteban Montero</span></span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-envelope text-primary"></i>
+              <span class="text-gray-300">Email: <span class="text-white">juanestebanmonteroarias7@email.com</span></span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-map-marker-alt text-primary"></i>
+              <span class="text-gray-300">Location: <span class="text-white">Floridablanca</span></span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-graduation-cap text-primary"></i>
+              <span class="text-gray-300">Age: <span class="text-white">17</span></span>
+            </div>
+          </div>
+
+          <!-- CV Button -->
+          <div class="pt-6">
+            <a href="https://www.canva.com/design/DAGt7zKUjEY/i9T9KXeTUcEmhT2VTnC6Jw/edit?utm_content=DAGt7zKUjEY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank"
+              class="btn-primary px-6 py-3 rounded-full bg-primary hover:bg-primary/80 text-white font-medium transition-all inline-flex items-center gap-2">
+              <i class="fas fa-download"></i>
+              Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="habilidades" class="section-with-bg py-20 relative" data-bg="habilidades-bg">
+    <div class="absolute inset-0 z-0">
+      <img src="img/fondo 3.png" alt="Fondo habilidades" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/25 backdrop-blur-sm"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-8 md:px-16 relative z-10">
+      <div class="text-center mb-16">
+        <div class="flex items-center justify-center mb-4">
+          <div class="h-1 w-12 bg-primary rounded-full mr-4"></div>
+          <span class="text-primary font-medium">MY ABILITIES</span>
+          <div class="h-1 w-12 bg-primary rounded-full ml-4"></div>
+        </div>
+        <div class="skills-title-container">
+          <img src="img/techskills.png" alt="Tech Skills" class="skills-title active" id="tech-title" style="max-width: 50%;">
+          <img src="img/softskills.png" alt="Soft Skills" class="skills-title hidden" id="soft-title" style="max-width: 50%;">
+        </div>
+        <p class="text-white max-w-2xl mx-auto">Combining technical knowledge and interpersonal skills to create effective digital solutions.</p>
+      </div>
+
+      <!-- Tabs to switch between technical and soft skills -->
+      <div class="mb-10">
+        <div class="flex justify-center space-x-4">
+          <button id="tab-tech" onclick="openTab(event, 'tech-skills')"
+            class="tab-btn active px-6 py-2 rounded-full bg-primary text-white font-medium transition-all">Technical</button>
+          <button id="tab-soft" onclick="openTab(event, 'soft-skills')"
+            class="tab-btn px-6 py-2 rounded-full bg-darkAccent hover:bg-primary/80 text-white font-medium transition-all">Soft</button>
+        </div>
+      </div>
+
+      <!-- Contenido de habilidades técnicas -->
+      <div id="tech-skills" class="tab-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        <!-- HTML -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div
+              class="flip-card-front bg-[#1e293b] rounded-xl p-6 flex flex-col items-center justify-center shadow-lg">
+              <img src="https://cdn.simpleicons.org/html5" alt="HTML" class="w-12 h-12 mb-4" />
+              <p class="text-white text-lg font-medium">HTML</p>
+            </div>
+            <div
+              class="flip-card-back bg-primary rounded-xl p-4 sm:p-6 flex flex-col items-center justify-center shadow-lg w-full h-full">
+              <p class="text-white text-sm sm:text-base leading-relaxed font-medium break-words text-center">
+                Semantic and accessible structure for modern websites.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CSS -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div
+              class="flip-card-front bg-[#1e293b] rounded-xl p-6 flex flex-col items-center justify-center shadow-lg">
+              <img src="https://cdn.simpleicons.org/css" alt="CSS" class="w-12 h-12 mb-4" />
+              <p class="text-white text-lg font-medium">CSS</p>
+            </div>
+            <div
+              class="flip-card-back bg-primary rounded-xl p-4 sm:p-6 flex flex-col items-center justify-center shadow-lg w-full h-full">
+              <p class="text-white text-sm sm:text-base leading-relaxed font-medium break-words text-center">
+                Responsive designs and fluid animations for attractive visual experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div
+              class="flip-card-front bg-[#1e293b] rounded-xl p-6 flex flex-col items-center justify-center shadow-lg">
+              <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" class="w-12 h-12 mb-4" />
+              <p class="text-white text-lg font-medium">JavaScript</p>
+            </div>
+            <div
+              class="flip-card-back bg-primary rounded-xl p-4 sm:p-6 flex flex-col items-center justify-center shadow-lg w-full h-full">
+              <p class="text-white text-sm sm:text-base leading-relaxed font-medium break-words text-center">
+                Dynamic interactivity and modern user experiences in web applications.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- React.js -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div
+              class="flip-card-front bg-[#1e293b] rounded-xl p-6 flex flex-col items-center justify-center shadow-lg">
+              <img src="https://cdn.simpleicons.org/react" alt="React.js" class="w-12 h-12 mb-4" />
+              <p class="text-white text-lg font-medium">React.js</p>
+            </div>
+            <div
+              class="flip-card-back bg-primary rounded-xl p-4 sm:p-6 flex flex-col items-center justify-center shadow-lg w-full h-full">
+              <p class="text-white text-sm sm:text-base leading-relaxed font-medium break-words text-center">
+                Componentized and reactive user interfaces for modern applications.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Node.js -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div
+              class="flip-card-front bg-[#1e293b] rounded-xl p-6 flex flex-col items-center justify-center shadow-lg">
+              <img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js" class="w-12 h-12 mb-4" />
+              <p class="text-white text-lg font-medium">Node.js</p>
+            </div>
+            <div
+              class="flip-card-back bg-primary rounded-xl p-4 sm:p-6 flex flex-col items-center justify-center shadow-lg w-full h-full">
+              <p class="text-white text-sm sm:text-base leading-relaxed font-medium break-words text-center">
+                Efficient backend development with JavaScript for scalable applications.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Python -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div
+              class="flip-card-front bg-[#1e293b] rounded-xl p-6 flex flex-col items-center justify-center shadow-lg">
+              <img src="https://cdn.simpleicons.org/python" alt="Python" class="w-12 h-12 mb-4" />
+              <p class="text-white text-lg font-medium">Python</p>
+            </div>
+            <div
+              class="flip-card-back bg-primary rounded-xl p-4 sm:p-6 flex flex-col items-center justify-center shadow-lg w-full h-full">
+              <p class="text-white text-sm sm:text-base leading-relaxed font-medium break-words text-center">
+                Versatility for web development, data analysis, and automation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MySQL -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div
+              class="flip-card-front bg-[#1e293b] rounded-xl p-6 flex flex-col items-center justify-center shadow-lg">
+              <img src="https://cdn.simpleicons.org/mysql" alt="MySQL" class="w-12 h-12 mb-4" />
+              <p class="text-white text-lg font-medium">MySQL</p>
+            </div>
+            <div
+              class="flip-card-back bg-primary rounded-xl p-4 sm:p-6 flex flex-col items-center justify-center shadow-lg w-full h-full">
+              <p class="text-white text-sm sm:text-base leading-relaxed font-medium break-words text-center">
+                Relational database management for robust applications.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lua -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div
+              class="flip-card-front bg-[#1e293b] rounded-xl p-6 flex flex-col items-center justify-center shadow-lg">
+              <img src="https://cdn.simpleicons.org/lua" alt="Lua" class="w-12 h-12 mb-4" />
+              <p class="text-white text-lg font-medium">Lua</p>
+            </div>
+            <div
+              class="flip-card-back bg-primary rounded-xl p-4 sm:p-6 flex flex-col items-center justify-center shadow-lg w-full h-full">
+              <p class="text-white text-sm sm:text-base leading-relaxed font-medium break-words text-center">
+                Lightweight scripting for application extensions and customization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenido de habilidades blandas (oculto inicialmente) -->
+      <div id="soft-skills" class="tab-content hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        <!-- Teamwork -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-users text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-lg font-semibold mt-4">Teamwork</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 95%"></div>
+          </div>
+          <p class="text-sm text-gray-400 mt-2">Effective collaboration and clear communication in team environments.</p>
+        </div>
+
+        <!-- Problem Solving -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-puzzle-piece text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-lg font-semibold mt-4">Problem Solving</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 90%"></div>
+          </div>
+          <p class="text-sm text-gray-400 mt-2">Analytical approach to identify and solve complex problems.</p>
+        </div>
+
+        <!-- Communication -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-comments text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-lg font-semibold mt-4">Communication</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 85%"></div>
+          </div>
+          <p class="text-sm text-gray-400 mt-2">Clear expression of ideas and active listening in professional settings.</p>
+        </div>
+
+        <!-- Adaptability -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-sync-alt text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-lg font-semibold mt-4">Adaptability</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 88%"></div>
+          </div>
+          <p class="text-sm text-gray-400 mt-2">Flexibility to adapt to new environments and technologies.</p>
+        </div>
+
+        <!-- Time Management -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-clock text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-lg font-semibold mt-4">Time Management</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 92%"></div>
+          </div>
+          <p class="text-sm text-gray-400 mt-2">Efficient organization of tasks and meeting deadlines.</p>
+        </div>
+
+        <!-- Creativity -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-lightbulb text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-lg font-semibold mt-4">Creativity</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 87%"></div>
+          </div>
+          <p class="text-sm text-gray-400 mt-2">Innovative thinking to find original solutions.</p>
+        </div>
+
+        <!-- Leadership -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-crown text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-lg font-semibold mt-4">Leadership</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 80%"></div>
+          </div>
+          <p class="text-sm text-gray-400 mt-2">Ability to guide teams and motivate colleagues.</p>
+        </div>
+
+        <!-- Continuous Learning -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-book text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-lg font-semibold mt-4">Continuous Learning</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 98%"></div>
+          </div>
+          <p class="text-sm text-gray-400 mt-2">Constant dedication to acquiring new knowledge and skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="proyectos" class="section-with-bg py-20 relative" data-bg="proyectos-bg">
+    <div class="absolute inset-0 z-0">
+      <img src="img/fondo 4.png" alt="Fondo proyectos" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/25 backdrop-blur-sm"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-8 md:px-16 relative z-10">
+      <h2 class="text-4xl font-bold mb-16 text-center">
+        <img src="img/myprojects.png" alt="My Projects" class="w-full max-w-md mx-auto">
+      </h2>
+
+      <!-- Projects Slider -->
+      <div class="relative max-w-5xl mx-auto">
+        <div class="project-slider overflow-hidden">
+          <div class="slider-container flex transition-transform duration-500">
+            <!-- Project 1 -->
+            <div class="project-slide min-w-full md:min-w-[33.333%] px-4">
+              <div class="project-img-container">
+                <img src="img/proyecto1.jpg" alt="Project 1" class="project-img" />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/Monteroo0/HappyFeet_Veterinaria_MonteroJuan_RomeroKennei" class="project-link" aria-label="View code">
+                      <i class="fas fa-code"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info bg-darkAccent/90 backdrop-blur-sm p-6 rounded-b-xl">
+                <h3 class="text-xl font-semibold mb-2">HappyFeet</h3>
+                <p class="text-gray-300 mb-4">Development of a Java application managed by a veterinary clinic, with functions such as user data management, entities, events, in MySQL.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">MySQL</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-slide min-w-full md:min-w-[33.333%] px-4">
+              <div class="project-img-container">
+                <img src="img/proyecto2.jpg" alt="Project 2" class="project-img" />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/KenneiRomero/Proyecto_MYSQL_GestionFinca/" class="project-link" aria-label="View code">
+                      <i class="fas fa-code"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info bg-darkAccent/90 backdrop-blur-sm p-6 rounded-b-xl">
+                <h3 class="text-xl font-semibold mb-2">UberrimoDB</h3>
+                <p class="text-gray-300 mb-4">Development of a MySQL database with more than 500 entries, queries, procedures, transactions, and much more.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="tech-tag">MySQL</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-slide min-w-full md:min-w-[33.333%] px-4">
+              <div class="project-img-container">
+                <img src="img/proyecto3.jpg" alt="Project 3" class="project-img" />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://monteroo0.github.io/ACME-Bank/" class="project-link" aria-label="View demo">
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="#" class="https://github.com/Monteroo0/ACME-Bank" aria-label="View code">
+                      <i class="fas fa-code"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info bg-darkAccent/90 backdrop-blur-sm p-6 rounded-b-xl">
+                <h3 class="text-xl font-semibold mb-2">ACME Bank</h3>
+                <p class="text-gray-300 mb-4">Development of an interactive online bank that is capable of working as a real bank, with all the functions that this entails (Transfer, Withdraw, Pay Services, etc.)</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Photoshop</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Botones de navegación -->
+        <button class="slider-prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-primary text-white p-3 rounded-full shadow-lg z-10">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-next absolute top-1/2 right-0 transform -translate-y-1/2 bg-primary text-white p-3 rounded-full shadow-lg z-10">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contacto" class="section-with-bg py-20 relative" data-bg="contacto-bg">
+    <!-- Fondo de la sección -->
+    <div class="absolute inset-0 z-0">
+      <img src="img/fondo 1.png" alt="Fondo contacto" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/25"></div>
+    </div>
+    <div class="bg-overlay absolute inset-0 bg-black/0"></div>
+    <div class="max-w-6xl mx-auto px-8 md:px-16 relative z-10">
+      <h2 class="text-4xl font-bold mb-16 text-center">
+        <img src="img/contactme.png" alt="Contact Me" class="w-full max-w-md mx-auto">
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <!-- Contact Information -->
+        <div class="space-y-8">
+          <h3 class="text-2xl font-semibold text-primary">Let's Talk!</h3>
+          <p class="text-gray-300">
+            I'm interested in learning more about programming and technology.
+            If you have any questions or would like to connect, feel free to contact me.
+          </p>
+
+          <!-- Contact Details -->
+          <div class="space-y-6 pt-4">
+            <div class="flex items-start gap-4">
+              <div class="contact-icon-container">
+                <i class="fas fa-map-marker-alt text-xl text-primary"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-medium">Location</h4>
+                <p class="text-gray-300">Floridablanca, Colombia</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="contact-icon-container">
+                <i class="fas fa-envelope text-xl text-primary"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-medium">Email</h4>
+                <p class="text-gray-300">juanestebanmonteroarias7@email.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="contact-icon-container">
+                <i class="fas fa-phone text-xl text-primary"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-medium">Phone</h4>
+                <p class="text-gray-300">+57 302 581 2180</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="pt-6">
+            <h4 class="text-lg font-medium mb-4">Follow Me</h4>
+            <div class="flex gap-4">
+              <a href="https://github.com/Monteroo0" class="social-icon-large" aria-label="GitHub">
+                <i class="fab fa-github text-2xl hover:text-primary transition-colors"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/juan-montero0/" class="social-icon-large" aria-label="LinkedIn">
+                <i class="fab fa-linkedin text-2xl hover:text-primary transition-colors"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <form id="contact-form" class="space-y-6">
+            <div class="form-group">
+              <label for="name" class="block mb-2 text-white">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name"
+                class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="block mb-2 text-white">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com"
+                class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="block mb-2 text-white">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Message subject"
+                class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="block mb-2 text-white">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message"
+                class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none" required></textarea>
+            </div>
+
+            <button type="submit"
+              class="btn-primary w-full px-6 py-3 rounded-full bg-primary hover:bg-primary/80 text-white font-medium transition-all flex items-center justify-center gap-2">
+              <i class="fas fa-paper-plane"></i>
+              Send message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-background py-8 border-t border-gray-800">
+    <div class="max-w-6xl mx-auto px-8 md:px-16">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <img src="img/logo.png" alt="Logo" class="small-logo mb-4" />
+          <p class="text-gray-400">Developing creative solutions for complex problems.</p>
+        </div>
+
+        <div class="text-center md:text-right">
+          <p class="text-white">© 2025 Juan Esteban Montero. All rights reserved.</p>
+          <p class="text-white text-sm mt-2">Designed and developed with ❤️</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón de volver arriba -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary hover:bg-primary/80 text-white p-3 rounded-full shadow-lg transition-all opacity-0 invisible">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
